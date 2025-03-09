@@ -14,7 +14,7 @@ class SplashPage extends StatelessWidget {
     return BlocProvider(
       create: (context) => SplashCubit()..initialize(),
       child: Scaffold(
-        backgroundColor: ColorsUtility.mainBackgroundColor,
+        // backgroundColor: ColorsUtility.mainBackgroundColor,
         body: SafeArea(
           child: Center(
             child: Column(

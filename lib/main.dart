@@ -1,6 +1,8 @@
 import 'dart:ui';
 import 'package:app_restaurant/screens/onboarding/onboarding_screen.dart';
+import 'package:app_restaurant/screens/servicesScreen/services_screen.dart';
 import 'package:app_restaurant/screens/splash/splash_screen.dart';
+import 'package:app_restaurant/utils/colors_utility.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
@@ -24,6 +26,7 @@ class MyApp extends StatelessWidget {
       builder: DevicePreview.appBuilder,
       title: 'Flutter Demo',
       theme: ThemeData(
+        scaffoldBackgroundColor: ColorsUtility.mainBackgroundColor,
         fontFamily: 'Raleway',
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
@@ -34,6 +37,8 @@ class MyApp extends StatelessWidget {
         switch (routeName) {
           case OnboardingScreen.id:
             return MaterialPageRoute(builder: (context) => const OnboardingScreen());
+          case ServicesScreen.id:
+            return MaterialPageRoute(builder: (context) => const ServicesScreen());
           default:
             return MaterialPageRoute(builder: (context) => const SplashPage());
         }
